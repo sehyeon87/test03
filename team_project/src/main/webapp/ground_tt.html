@@ -1,0 +1,444 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--XML namespace 추가-->
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ground</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- menu Custom CSS -->
+<link href="css/stylish-portfolio.css" rel="stylesheet">
+<!-- 슬라이드 Custom CSS -->
+<!-- <link href="css/business-casual.css" rel="stylesheet"> -->
+
+<!-- modal 기능 ==> 잘쓰삼 -->
+<link href="css/modal.css" rel="stylesheet" type="text/css">
+
+<!-- 맨위에 navbar -->
+<link href="css/navbar.css" rel="stylesheet">
+<!-- not navbar -->
+<link href="css/ectnavbar.css" rel="stylesheet">
+
+
+<!-- Custom Fonts -->
+<!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+	rel="stylesheet" type="text/css"> -->
+
+<!-- Fonts -->
+<!-- <link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+	rel="stylesheet" type="text/css">
+ -->
+
+<link href='http://fonts.googleapis.com/css?family=Patua+One'
+	rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="quill/quill.snow.css">
+
+<style>
+/* div {
+	border: 1px solid red;
+	padding: 5px;
+}
+
+a {
+	border: 1px solid blue;
+}
+
+span {
+	border: 1px solid green;
+}
+ */
+* {
+	font-family: 'Patua One', cursive;
+}
+
+.tt_video_background {
+	background-color: ORCHID;
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+	opacity: 0.8;
+	position: absolute;
+	top: 110px;
+	width: 100%;
+	height: 250px;
+	margin: 10px;
+	padding-top: 35px;
+}
+
+#tt_video_position {
+	overflow: hidden;
+	height: 250px;
+}
+
+.tt_video {
+	height: 250px;
+}
+
+.tt_view_video {
+	width: 100%;
+}
+
+.tt-write-header {
+	color: white;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.tt-write-body {
+	color: white;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+/*/////////////editor css임/////////////////  */
+#content {
+	height: 500px;
+}
+
+#course {
+	height: auto;
+}
+
+#last-name {
+	width: 100px;
+}
+
+#htmlEditor h1 {
+	font-size: 1.9em;
+}
+
+#sampleContainer {
+	overflow: visible;
+}
+
+#state {
+	width: 70px;
+	height: auto;
+}
+
+.advanced-wrapper {
+	border: 1px solid #ccc;
+	float: left;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.advanced-wrapper {
+	width: 100%;
+}
+
+.editor-container {
+	height: 350px;
+}
+
+.toolbar-container {
+	border-bottom: 1px solid #ccc;
+}
+
+.tt_editor_triger {
+	margin: 100px 300px 10px 300px;
+}
+
+.pure-form {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.pure-g {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+</style>
+<script>
+	
+</script>
+</head>
+<body>
+	<!-- ////////////////////////HEADER 부분/////////////////////////////// -->
+	<div class="tt_header">
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"> <img
+					src="img/LOGO.jpg" width="100px" height="30px">
+				</a>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="cropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> <span>어디갈까요?</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="#map3-head">R_Course</a></li>
+								<li><a href="#map1-head">4대강</a></li>
+								<li><a href="#map2-head">한강</a></li>
+								<li><a href="ground_rider.html">장거리</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Not_yet</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> <span>같이갈래요?</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="ground_tt.html">Notice</a></li>
+								<li><a href="ground_together.html">Join us</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Not_yet</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggel"
+							data-toggle="dropdown"> <span>다녀왔어요!</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="ground_review.html">My History</a></li>
+								<li><a href="#">My Friends</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggel"
+							data-toggle="dropdown"> <span>내말을들어줘</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Notice</a></li>
+								<li><a href="#">Information</a></li>
+							</ul>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#popupLogin"><div class="hoverbaner">드루와</div></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ////////////////////////BODY 부분/////////////////////////////////// -->
+	<div class="tt_body">
+		<!-- video 기능 -->
+		<div id="tt_video_position">
+			<div class="tt_video">
+				<video class="tt_view_video" src="./video/Ground02.mp4" controls
+					loop muted autoplay poster="mp4"></video>
+			</div>
+		</div>
+
+		<div class="tt_video_background">
+			<div class="tt_write">
+				<div class="tt-write-header">Notice</div>
+				<div class="tt-write-body">Enjoy Your Trip</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="tt_editor">
+		<div class="tt_editor_triger">
+			<form class="pure-form pure-form-stacked">
+				<fieldset>
+
+					<div class="pure-g">
+						<div class="pure-u-1 pure-u-md-1-3">
+							<label for="first-name">제목</label> <input id="first-name"
+								class="pure-u-23-24" type="text">
+						</div>
+					</div>
+				</fieldset>
+			</form>
+			<form class="pure-form">
+				<fieldset>
+
+					<label for="traveldate">여행일자</label>
+					<!-- <br> -->
+					<input type="date"> ~ <input type="date">
+
+					<!-- <div class="pure-u-1 pure-u-md-1-3"> -->
+					<label for="city">사는지역</label> <input id="local" class="pure-u-1-5"
+						type="text">
+					<!-- </div>  -->
+
+					<!-- <div class="pure-form"> -->
+					<label for="state">모집인원</label> <select id="state"
+						class="pure-input-1-2">
+						<option>1명</option>
+						<option>2명</option>
+						<option>3명</option>
+						<option>4명</option>
+						<option>5명</option>
+					</select>
+					<!-- <label for="leader">리더필요유무</label> 
+                <input type="checkbox" id="leadercheck">-->
+					<!-- </div> -->
+				</fieldset>
+			</form>
+			<form class="pure-form pure-form-stacked">
+				<fieldset>
+					<div class="pure-form">
+						<label for="course">코스</label> <select id="course"
+							class="pure-input-1-2">
+							<option>4박5일 제주도 자전거 일주</option>
+							<option>한강라이더코스</option>
+							<option>4대강테마코스</option>
+							<option>해운대 해수욕장 코스</option>
+						</select>
+					</div>
+
+					<div class="advanced-wrapper">
+						<div class="toolbar-container">
+							<span class="ql-format-group"> <select title="Font"
+								class="ql-font">
+									<option value="sans-serif" selected>Sans Serif</option>
+									<option value="Georgia, serif">Serif</option>
+									<option value="Monaco, 'Courier New', monospace">Monospace</option>
+							</select> <select title="Size" class="ql-size">
+									<option value="10px">작게</option>
+									<option value="13px" selected>보통</option>
+									<option value="18px">크게</option>
+									<option value="32px">아주 크게</option>
+							</select></span><span class="ql-format-group"><span title="Bold"
+								class="ql-format-button ql-bold"></span><span
+								class="ql-format-separator"></span><span title="Italic"
+								class="ql-format-button ql-italic"></span><span
+								class="ql-format-separator"></span><span title="Underline"
+								class="ql-format-button ql-underline"></span></span><span
+								class="ql-format-group"> <select title="Text Color"
+								class="ql-color">
+									<option value="rgb(0, 0, 0)" selected></option>
+									<option value="rgb(230, 0, 0)"></option>
+									<option value="rgb(255, 153, 0)"></option>
+									<option value="rgb(255, 255, 0)"></option>
+									<option value="rgb(0, 138, 0)"></option>
+									<option value="rgb(0, 102, 204)"></option>
+									<option value="rgb(153, 51, 255)"></option>
+									<option value="rgb(255, 255, 255)"></option>
+									<option value="rgb(250, 204, 204)"></option>
+									<option value="rgb(255, 235, 204)"></option>
+									<option value="rgb(255, 255, 204)"></option>
+									<option value="rgb(204, 232, 204)"></option>
+									<option value="rgb(204, 224, 245)"></option>
+									<option value="rgb(235, 214, 255)"></option>
+									<option value="rgb(187, 187, 187)"></option>
+									<option value="rgb(240, 102, 102)"></option>
+									<option value="rgb(255, 194, 102)"></option>
+									<option value="rgb(255, 255, 102)"></option>
+									<option value="rgb(102, 185, 102)"></option>
+									<option value="rgb(102, 163, 224)"></option>
+									<option value="rgb(194, 133, 255)"></option>
+									<option value="rgb(136, 136, 136)"></option>
+									<option value="rgb(161, 0, 0)"></option>
+									<option value="rgb(178, 107, 0)"></option>
+									<option value="rgb(178, 178, 0)"></option>
+									<option value="rgb(0, 97, 0)"></option>
+									<option value="rgb(0, 71, 178)"></option>
+									<option value="rgb(107, 36, 178)"></option>
+									<option value="rgb(68, 68, 68)"></option>
+									<option value="rgb(92, 0, 0)"></option>
+									<option value="rgb(102, 61, 0)"></option>
+									<option value="rgb(102, 102, 0)"></option>
+									<option value="rgb(0, 55, 0)"></option>
+									<option value="rgb(0, 41, 102)"></option>
+									<option value="rgb(61, 20, 102)"></option>
+							</select><span class="ql-format-separator"></span> <select
+								title="Background Color" class="ql-background">
+									<option value="rgb(0, 0, 0)"></option>
+									<option value="rgb(230, 0, 0)"></option>
+									<option value="rgb(255, 153, 0)"></option>
+									<option value="rgb(255, 255, 0)"></option>
+									<option value="rgb(0, 138, 0)"></option>
+									<option value="rgb(0, 102, 204)"></option>
+									<option value="rgb(153, 51, 255)"></option>
+									<option value="rgb(255, 255, 255)" selected></option>
+									<option value="rgb(250, 204, 204)"></option>
+									<option value="rgb(255, 235, 204)"></option>
+									<option value="rgb(255, 255, 204)"></option>
+									<option value="rgb(204, 232, 204)"></option>
+									<option value="rgb(204, 224, 245)"></option>
+									<option value="rgb(235, 214, 255)"></option>
+									<option value="rgb(187, 187, 187)"></option>
+									<option value="rgb(240, 102, 102)"></option>
+									<option value="rgb(255, 194, 102)"></option>
+									<option value="rgb(255, 255, 102)"></option>
+									<option value="rgb(102, 185, 102)"></option>
+									<option value="rgb(102, 163, 224)"></option>
+									<option value="rgb(194, 133, 255)"></option>
+									<option value="rgb(136, 136, 136)"></option>
+									<option value="rgb(161, 0, 0)"></option>
+									<option value="rgb(178, 107, 0)"></option>
+									<option value="rgb(178, 178, 0)"></option>
+									<option value="rgb(0, 97, 0)"></option>
+									<option value="rgb(0, 71, 178)"></option>
+									<option value="rgb(107, 36, 178)"></option>
+									<option value="rgb(68, 68, 68)"></option>
+									<option value="rgb(92, 0, 0)"></option>
+									<option value="rgb(102, 61, 0)"></option>
+									<option value="rgb(102, 102, 0)"></option>
+									<option value="rgb(0, 55, 0)"></option>
+									<option value="rgb(0, 41, 102)"></option>
+									<option value="rgb(61, 20, 102)"></option>
+							</select><span class="ql-format-separator"></span> <select
+								title="Text Alignment" class="ql-align">
+									<option value="left" selected></option>
+									<option value="center"></option>
+									<option value="right"></option>
+									<option value="justify"></option>
+							</select></span><span class="ql-format-group"><span title="Link"
+								class="ql-format-button ql-link"></span><span
+								class="ql-format-separator"></span><span title="Image"
+								class="ql-format-button ql-image"></span><span
+								class="ql-format-separator"></span><span title="List"
+								class="ql-format-button ql-list"></span></span>
+						</div>
+						<div class="editor-container"></div>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<button type="submit" class="pure-button pure-button-primary"
+			style="margin-left: 81%;">
+			<a href="ground_together.html"> 확인 </a>
+		</button>
+		<button type="reset" class="pure-button pure-button-primary"
+			style="margin-left: 1%">
+			<a href="ground_together.html"> 취소 </a>
+		</button>
+	</div>
+
+	<!-- ////////////////////////Footer 부분/////////////////////////////////// -->
+	<!-- <div class="tt_footer"></div> -->
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+
+	<!--  Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript"
+		src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/click_cal.js"></script>
+	<script type="text/javascript"
+		src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+	<script type="text/javascript" src="quill/quill.js"></script>
+	<script type="text/javascript" src="quill/advanced.js"></script>
+
+</body>
+</html>

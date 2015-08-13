@@ -1,0 +1,51 @@
+body {
+	padding-top: 120px;
+	/* font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background: url('../img/travel02.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover; */
+}
+
+.navbar {
+	border-radius: 0;
+}
+
+.navbar-header {
+	display: none;
+}
+
+.navbar {
+	min-height: 0;
+}
+
+.navbar-default {
+	background: #fff;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.nav>li>a {
+	padding: 10px;
+}
+
+.navbar-nav>li>a {
+	line-height: normal;
+}
+
+.navbar-nav {
+	display: table;
+	/* float: none; */
+	margin: 0 auto;
+	table-layout: fixed;
+	font-size: small;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 3px;
+}
+
+.navbar-brand {
+	text-transform: uppercase;
+	font-weight: 900;
+	letter-spacing: 2px;
+}

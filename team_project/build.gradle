@@ -1,0 +1,67 @@
+apply plugin: 'java' // 자바 관련 명령이 들어 있는 그래들 플러그인
+//apply plugin: 'eclipse' // 이클립스 관련 명령이 들어 있는 그래들 플러그인
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'  // 'eclipse' 플러그인을 포함하고 있다.
+
+// WTP 플러그인과 관련된 설정 파일의 내용을 변경하기
+// - .settings/org.eclipse.wst.common.project.facet.core.xml 파일의 값을 설정한다.
+eclipse {
+  wtp {
+    facet {
+      facet name: 'jst.web', version: '3.0'
+      facet name: 'jst.java', version: '1.7'
+    }
+  }
+}
+
+// 소스 파일의 인코딩 문자집합 지정하기
+// compileJava 작업을 수행할 때 참고할 정보를 설정한다.
+compileJava {
+  // 소스 코드의 문자 집합을 지정한다.
+  options.encoding = "UTF-8"
+  
+  // 컴파일할 때 소스의 자바 버전을 검사한다.
+  sourceCompatibility = 1.7
+}
+
+// 의존 라이브러리를 다운로드 받을 서버 지정.
+repositories {
+  // 메이븐 중앙서버(https://repo1.maven.org/maven2/)에서 다운로드 받는다. 
+  mavenCentral() 
+}
+
+// 다운로드 받을 의존 라이브러리 지정.
+// => 라이브러리 정보는 mvnrepository.com 에서 검색해 보라!
+dependencies {
+  // 컴파일 할 때만 사용하고, 배치할 때는 제외하는 라이브러리
+  providedCompile 'javax.servlet:javax.servlet-api:3.0.1'
+
+  //compile "그룹이름:라이브러리이름:버전"
+  compile 'org.springframework:spring-webmvc:4.1.7.RELEASE'
+  compile 'org.springframework:spring-jdbc:4.1.7.RELEASE'
+  compile 'org.mybatis:mybatis:3.3.0'
+  compile 'org.mybatis:mybatis-spring:1.2.3'
+  compile 'commons-fileupload:commons-fileupload:1.3.1'
+  compile 'javax.servlet:jstl:1.2'
+  compile 'org.aspectj:aspectjweaver:1.8.6'
+  compile 'junit:junit:4.12'
+  compile 'org.springframework:spring-test:4.1.7.RELEASE'
+  compile 'commons-dbcp:commons-dbcp:1.4'
+  compile 'log4j:log4j:1.2.17'
+  compile 'commons-fileupload:commons-fileupload:1.3.1'
+
+  compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

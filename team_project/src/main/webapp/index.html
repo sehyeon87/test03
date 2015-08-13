@@ -1,0 +1,438 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!--XML namespace 추가-->
+<html xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ground</title>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- menu Custom CSS -->
+<link href="css/stylish-portfolio.css" rel="stylesheet">
+<!-- 슬라이드 Custom CSS -->
+<!-- <link href="css/business-casual.css" rel="stylesheet"> -->
+
+<!-- modal 기능 ==> 잘쓰삼 -->
+<link href="css/modal.css" rel="stylesheet" type="text/css">
+
+<!-- 맨위에 navbar -->
+<link href="css/navbar.css" rel="stylesheet">
+<!-- not navbar -->
+<link href="css/ectnavbar.css" rel="stylesheet">
+
+
+<!-- Custom Fonts -->
+<!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+	rel="stylesheet" type="text/css"> -->
+
+<!-- Fonts -->
+<!-- <link
+	href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+	rel="stylesheet" type="text/css">
+<link
+	href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+	rel="stylesheet" type="text/css">
+ -->
+
+<link href='http://fonts.googleapis.com/css?family=Patua+One'
+	rel='stylesheet' type='text/css'>
+
+<style>
+/*  div {
+	border: 1px solid red;
+} 
+ a {
+	border: 1px solid blue;
+}
+
+span {
+	border: 1px solid green;
+}  */
+* {
+	font-family: 'Patua One', cursive;
+}
+
+.video_background {
+	background-color: cadetblue;
+	text-align: center;
+	font-size: xx-large;
+	font-weight: bold;
+	opacity: 0.8;
+	position: absolute;
+	top: 110px;
+	width: 100%;
+	height: 625px;
+	margin: 10px;
+	padding-top: 100px;
+}
+
+#video_position {
+	overflow: hidden;
+	height: 625px;
+}
+
+.video {
+	height: 625px;
+}
+
+.view_video {
+	width: 100%;
+}
+
+.main_link1>a {
+	margin-top: 100px;
+	text-decoration: none;
+	margin-left: 200px;
+	text-align: center;
+	color: white;
+	border: 2px solid white;
+	padding: 10px 15px;
+	text-decoration: none;
+}
+
+.main_link2>a {
+	margin-top: 100px;
+	text-decoration: none;
+	margin-right: 200px;
+	background-color: white;
+	text-align: center;
+	color: cadetblue;
+	border: 2px solid white;
+	padding: 10px 15px;
+}
+
+.main-write-header {
+	color: white;
+	font-size: 250%;
+	font-weight: bold;
+}
+
+.main-write-body {
+	color: white;
+	font-size: 200%;
+	font-weight: bold;
+	margin-bottom: 50px;
+}
+
+.login-header {
+	background-color: orange;
+	font-size: 200%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+.info_header {
+	background-color: orange;
+	font-size: 200%;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+
+.info-body-button-center {
+	text-align: center;
+}
+</style>
+
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId : '115221355489792', // 앱 ID
+			status : true, // 로그인 상태를 확인
+			cookie : true, // 쿠키허용
+			xfbml : true
+		// parse XFBML
+		});
+
+		FB.getLoginStatus(function(response) {
+			if (response.status === 'connected') {
+
+				FB.api('/me', function(user) {
+					if (user) {
+						var image = document.getElementById('image');
+						image.src = 'http://graph.facebook.com/' + user.id
+								+ '/picture';
+						var name = document.getElementById('name');
+						name.innerHTML = user.name
+						var id = document.getElementById('id');
+						id.innerHTML = user.id
+					}
+				});
+
+			} else if (response.status === 'not_authorized') {
+
+			} else {
+
+			}
+		});
+
+		FB.Event.subscribe('auth.login', function(response) {
+			document.location.reload();
+		});
+	};
+
+	// Load the SDK Asynchronously
+	(function(d) {
+		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		if (d.getElementById(id)) {
+			return;
+		}
+		js = d.createElement('script');
+		js.id = id;
+		js.async = true;
+		js.src = "//connect.facebook.net/ko_KR/all.js";
+		ref.parentNode.insertBefore(js, ref);
+	}(document));
+</script>
+</head>
+<body>
+	<!-- ////////////////////////HEADER 부분/////////////////////////////// -->
+	<div class="main_header">
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<a class="navbar-brand" href="index.html"> <img
+					src="img/LOGO.jpg" width="100px" height="30px">
+				</a>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse"
+						data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse"
+					id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="cropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> <span>어디갈까요?</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="ground_cs.html">Theme</a></li>
+								<li><a href="ground_rider.html">장거리</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Not_yet</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggle"
+							data-toggle="dropdown"> <span>같이갈래요?</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="ground_tt.html">Notice</a></li>
+								<li><a href="ground_together.html">Join us</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Not_yet</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggel"
+							data-toggle="dropdown"> <span>다녀왔어요!</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="ground_review.html">My History</a></li>
+								<li><a href="#">My Friends</a></li>
+							</ul>
+						<li class="cropdown"><a href="#" class="dropdown-toggel"
+							data-toggle="dropdown"> <span>내말을들어줘</span> <span
+								class="caret"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Notice</a></li>
+								<li><a href="#">Information</a></li>
+							</ul>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#popupLogin"><div class="hoverbaner">드루와</div></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ////////////////////////BODY 부분/////////////////////////////////// -->
+	<div class="main_body">
+
+		<!-- Video 기능 -->
+		<div id="video_position">
+			<div class="video">
+				<video class="view_video"
+					src="./video/Ground02.mp4" controls loop
+					muted autoplay poster="mp4"> </video>
+			</div>
+		</div>
+
+		<div class="video_background">
+			<div class="main-write">
+				<div class="main-write-header">그라운드</div>
+				<div class="main-write-body">Join the Ground Revolution!</div>
+			</div>
+			<div class="col-md-6">
+				<span class="main_link1"> <a href="ground_cs.html"> View
+						Course </a>
+				</span>
+			</div>
+
+			<div class="col-md-5">
+				<span class="main_link2"> <a href="ground_review.html"> Read
+						Review </a>
+				</span>
+			</div>
+		</div>
+
+		<!-- modal 기능 팝업 뜸-->
+		<a href="#" class="overlay" id="popupLogin"></a>
+		<div class="popuppage_login">
+			<div class="login-header">
+				<h1>로그인</h1>
+			</div>
+			<div class="login-body">
+				<form name="loginForm" id="loginForm" method="post">
+					<!-- facebook login -->
+					<div id="fb-root">
+						<fb:login-button class="fb-button" show-faces="false" width="500"
+							max-rows="1" data-auto-logout-link="true">
+							<a href="#" onclick="FB.login();">Login with Facebook</a>
+							<br>
+						</fb:login-button>
+					</div>
+
+
+					<div class="login-body-id">
+						<input type="email" class="form-control" name="email"
+							placeholder="Email">
+
+					</div>
+					<div class="login-body-pwd">
+						<input type="password" class="form-control" name="password"
+							placeholder="Password">
+					</div>
+					<div class="login-button">
+						<button type="submit" form="loginForm" formaction="/app/login"
+							formtarget="_self" class="btn btn-warning">드로가기</button>
+						<a href="#popupJoin" class="btn btn-warning"> 회원가입 </a> <a
+							href="#" type="button" class="btn btn-warning"> 나가기 </a>
+					</div>
+				</form>
+			</div>
+			<a class="close" href="#close"></a>
+		</div>
+
+		<!-- modal2 ==> 회원가입 버튼 누를 시 회원가입 창 뜸 -->
+		<a href="#x" class="overlay1" id="popupJoin"></a>
+		<div class="popuppage_info" id="popupJoin">
+			<div class="info_header">
+				<h1>회원가입</h1>
+			</div>
+			<div class="info_body">
+				<form name="joinForm" id="joinForm" method="post">
+					<div class="info-id">
+						<!-- <label class="InputEmail">Email address</label> -->
+						<input type="email" class="form-control" id="emailSignUp"
+							name="email" placeholder="Email" value="default@default.com" />
+					</div>
+					<div class="info-id-check">
+						<!-- <label class="InputEmail">Email address</label> -->
+						<input type="text" class="form-control" id="emailCheck"
+							name="emailCheck" placeholder="Email Check" />
+					</div>
+					<div class="info-pwd">
+						<!-- <label for="InputPassword">Password</label> -->
+						<input type="password" class="form-control" id="passwordSignUp"
+							name="password" placeholder="Password" />
+					</div>
+					<div class="info-pwd-check">
+						<!-- <label for="InputPassword">Password</label> -->
+						<input type="password" class="form-control" id="passwordCheck"
+							name="passwordCheck" placeholder="Password Check" />
+					</div>
+					<div class="info-name">
+						<!-- 				<label class="InputName">Name</label> -->
+						<input type="text" class="form-control" name="name"
+							placeholder="Name" />
+					</div>
+					<div class="info-phoneNumber">
+						<!-- 	<label class="InputPhoneNumber">PhoneNumber</label> -->
+						<input type="tel" class="form-control" name="phoneNumber"
+							placeholder="Phone Number" />
+					</div>
+					<div class="info-gender">
+						<!-- 	<label class="InputGender">Gender -->
+						<label class="radio-inline"><input type="radio"
+							name="gender" value="Male">Male</label> <label
+							class="radio-inline"><input type="radio" name="gender"
+							value="Female">Female</label>
+					</div>
+					<div class="info-fileUpload">
+						<!-- 			<label class="Inputfile">사진첨부</label> -->
+						<input type="file" class="Inputfile" name="photoPath">
+						<h6 class="help-block">사용자 사진을 첨부하여 주세요.</h6>
+					</div>
+					<div class="info-body-button info-body-button-center">
+						<a href="#popupLogin" class="btn btn-warning"> 뒤로 </a>
+						<button type="submit" form="joinForm" formaction="/app/addUser"
+							formtarget="_self" class="btn btn-warning">가입하기</button>
+						<a href="#" class="btn btn-warning"> 나가기 </a>
+					</div>
+				</form>
+			</div>
+			<a class="close" href="#close"></a>
+		</div>
+
+		<!-- ////////////////////////////FOOTER 부분 ////////////////////////////// -->
+		<!-- 	<div class="main_footer">
+		
+	</div> -->
+
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+		<!-- 중복검사 스크립 가져오기 -->
+		<script
+			src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.js"></script>
+
+		<!--  Bootstrap Core JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+
+		<!-- 중복검사 스크립 -->
+		<script>
+			$("#joinForm").validate({
+				rules : {
+					emailSignUp : "required",
+					emailCheck : {
+						required : true,
+						equalTo : "#emailSignUp"
+					},
+					passwordSignUp : "required",
+					passwordCheck : {
+						required : true,
+						equalTo : "#passwordSignUp"
+					}
+				},
+				messages : {
+					emailSignUp : {
+						email : "올바른 이메일 주소가 아닙니다.",
+						required : "이메일을 입력해야 합니다."
+					},
+					emailCheck : {
+						required : "이메일 주소 확인을 해야 합니다.",
+						equalTo : "이메일 주소가 일치하지 않습니다."
+					},
+					passwordSignUp : "비밀번호를 입력해야 합니다.",
+					passwordCheck : {
+						required : "비밀번호 확인을 해야 합니다.",
+						equalTo : "비밀번호가 일치하지 않습니다."
+					}
+				}
+			});
+		</script>
+</body>
+</html>
